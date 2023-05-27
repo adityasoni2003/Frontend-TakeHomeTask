@@ -1,0 +1,23 @@
+$home-bg:#3b5d4f;
+$yellow-color:#f8bf28;
+
+$body-bg:#f0f2f1;
+$light-gray:#dce5e4;
+
+$button-bg:#2f2f2f;
+
+$crousel-btn-hover:#395d51;
+$crousel-btn:#dce5e4;
+
+$news-latter-btn:#35736e;
+
+
+
+
+@mixin for-size($size){
+    @if $size == phone{
+        @media (max-width:600px) {@content}
+    }@else if $size == tablet{
+        @media (max-width:1300px) {@content}
+    }
+}

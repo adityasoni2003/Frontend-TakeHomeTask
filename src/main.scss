@@ -1,0 +1,28 @@
+@import './styles/util';
+@import 'styles/navbar';
+@import 'styles/home';
+@import 'styles/items';
+@import 'styles/about';
+@import 'styles/services';
+@import 'styles/blog';
+@import 'styles/contact';
+
+:root *{
+    box-sizing: border-box;
+    font-family: sans-serif cursive;
+}
+
+body{
+    padding: 0 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    background: $light-gray;
+   
+    
+
+    section{
+        width: 100%;
+        
+    }
+}

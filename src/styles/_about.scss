@@ -1,0 +1,121 @@
+
+#about{
+    display: flex;
+    flex-direction: column;
+    
+    gap: 20px;
+    height: 200vh;
+    align-items: center;
+    padding-inline: 110px;
+
+
+    
+    @include for-size(phone){
+        position: relative;
+        
+        top: 300px;
+        padding-inline: 10px;
+    }
+    
+
+    .about_intro{
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        height: 100vh;
+        .info{
+            flex: 2;
+            width: 100%;
+            min-width: 350px;
+            height: 100%;
+            padding-top: 100px;
+            @include for-size(tablet){
+                height: auto;
+            }
+            h1{
+                font-size: 2.3rem;
+                font-family: sans-serif;
+            }
+            p{
+                font-size: 1.3rem;
+                color: gray;
+            }
+            .info_blocks{
+                width: 100%;
+                min-width: 350px;
+                display: flex;
+                flex-wrap: wrap;
+                place-content: center;
+                .block_points{
+                    width: 300px;
+                    img{
+                        width: 50px;
+                        object-fit: contain;
+                    }
+                    h1{
+                        font-size: 1.2rem;
+                        font-weight: 800;
+                    }
+                    p{
+                        font-size: 0.8;
+                    }
+                }
+            }
+        }
+        img{
+            flex:1;
+            width: 50%;
+            object-fit: contain;
+        }
+
+        &:last-child{
+            flex-direction: row-reverse;
+            
+            @include for-size(tablet){
+                position: relative;
+                top: 700px;
+                
+                padding-inline: 10px;
+            }
+            
+            img{
+                width: 60%;
+            }
+            .info_blocks{
+                width: 100%;
+                min-width: 350px;
+                display: flex;
+                flex-wrap: wrap;
+               
+                place-content: space-between;
+
+                @include for-size(phone){
+                    place-content: center;
+                }
+
+                .block_points{
+                    width: 250px;
+                    
+                    img{
+                        width: 50px;
+                        object-fit: contain;
+                    }
+                    
+                    p{
+                        font-size: 0.4;
+                        position: relative;
+                    }
+                    p::before{
+                        content: '\26AC';
+                        color: black;
+                        position: absolute;
+                        left: -5%;
+                        top: -5%;
+                        
+                    }
+                }
+            }
+        }
+
+    }
+}
